@@ -38,6 +38,7 @@ router.post('/', async (req, res) => {
     res.status(500).json({ 
       error: 'Failed to sign up',
       env_url: process.env.MONGO_URI,
+      error_body: error,
      });
   }
 });
