@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
     console.error('Signup error:', error); // Log the error for debugging
     res.status(500).json({ 
       error: 'Failed to sign up',
-      env_url: process.env.VERCEL_URL,
+      env_url: process.env.MONGO_URI,
      });
   }
 });
