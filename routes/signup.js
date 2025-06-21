@@ -35,7 +35,10 @@ router.post('/', async (req, res) => {
     }
   } catch (error) {
     console.error('Signup error:', error); // Log the error for debugging
-    res.status(500).json({ error: 'Failed to sign up' });
+    res.status(500).json({ 
+      error: 'Failed to sign up',
+      env_url: process.env.VERCEL_URL,
+     });
   }
 });
 
